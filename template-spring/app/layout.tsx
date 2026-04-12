@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google'
 
 import './globals.css'
 import { Providers } from '@/lib/providers'
+import { Chatbot } from '@/components/common/Chatbot'
 
 const inter = Inter({ 
   subsets: ['latin'],
@@ -12,8 +13,8 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: 'Restaurant App',
-  description: 'Modern restaurant ordering system',
+  title: 'Maison Élysia - Restaurant Gastronomique',
+  description: 'Découvrez une cuisine contemporaine inspirée des grandes traditions françaises',
   generator: 'v0.app',
 }
 
@@ -27,6 +28,7 @@ export default function RootLayout({
       <body className={`${inter.variable} font-sans antialiased bg-background text-foreground`}>
         <Providers>
           {children}
+          <Chatbot />
         </Providers>
       </body>
     </html>

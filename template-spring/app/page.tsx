@@ -88,14 +88,14 @@ export default function HomePage() {
                 href={user ? '/client/menu' : '/menu'}
                 className="px-8 py-4 bg-[#FF6B35] text-white rounded-xl font-bold hover:bg-[#FF6B35]/90 transition-all duration-300 hover:scale-105"
             >
-              Order Now
+              Commander Maintenant
             </Link>
 
             <a
                 href="#featured"
                 className="px-8 py-4 bg-white/90 text-gray-900 rounded-xl font-bold border-2 border-gray-300 hover:border-[#FF6B35] hover:text-[#FF6B35] transition-all duration-300"
             >
-              Explore Menu
+              Explorer le Menu
             </a>
           </div>
 
@@ -187,9 +187,9 @@ export default function HomePage() {
         <div className="relative max-w-7xl mx-auto z-10">
           {/* Section Header */}
           <div className="text-center mb-24">
-            <h2 className="text-5xl md:text-6xl font-black mb-6 text-gray-900 tracking-tight">Featured Dishes</h2>
+            <h2 className="text-5xl md:text-6xl font-black mb-6 text-gray-900 tracking-tight">Nos Spécialités</h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Check out our most loved dishes and special selections prepared fresh daily by our expert chefs
+              Découvrez nos plats les plus aimés et nos sélections spéciales préparés frais chaque jour par nos chefs experts
             </p>
           </div>
 
@@ -252,7 +252,7 @@ export default function HomePage() {
                     href={user ? '/client/menu' : '/menu'}
                     className="w-full px-6 py-4 bg-[#FF6B35] text-white rounded-2xl font-bold text-lg hover:bg-[#FF6B35]/90 transition-all duration-200 hover:shadow-xl hover:shadow-[#FF6B35]/30 text-center block mt-4"
                   >
-                    Order Now
+                    Commander
                   </Link>
                 </div>
               </div>
@@ -265,7 +265,7 @@ export default function HomePage() {
               href="/menu"
               className="inline-flex items-center gap-3 px-12 py-6 bg-[#FF6B35] text-white rounded-2xl font-bold text-lg hover:bg-[#FF6B35]/90 transition-all duration-200 hover:shadow-2xl hover:shadow-[#FF6B35]/30"
             >
-              View All Dishes
+              Voir Tous les Plats
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.5}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
               </svg>
@@ -273,14 +273,14 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-      {/* Section Localisation */}
+      {/* Location Section */}
       <section className="py-24 bg-gradient-to-b from-white to-gray-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 
           {/* Title */}
           <div className="text-center mb-14">
             <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 tracking-tight mb-4">
-              Nous Trouver
+              Localisation
             </h2>
             <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
               Venez vivre une expérience gastronomique unique dans un cadre élégant et chaleureux.
@@ -306,20 +306,63 @@ export default function HomePage() {
 
 
 
+      {/* About Section */}
+      <section id="about" className="relative py-28 md:py-36 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-50 to-white">
+        <div className="max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            {/* Content */}
+            <div className="space-y-6">
+              <div>
+                <h2 className="text-4xl md:text-5xl font-black text-gray-900 tracking-tight mb-4">À Propos</h2>
+                <h3 className="text-2xl font-bold text-[#FF6B35] mb-4">Maison Élysia</h3>
+              </div>
+              <p className="text-lg text-gray-600 leading-relaxed">
+                Depuis sa création, Maison Élysia incarne l&apos;excellence culinaire française. Notre restaurant est un temple de la gastronomie, où tradition et modernité se rencontrent pour offrir une expérience inoubliable.
+              </p>
+              <p className="text-lg text-gray-600 leading-relaxed">
+                Nos chefs passionnés sélectionnent les ingrédients les plus fins et préparent chaque plat avec une attention méticuleuse aux détails. Chaque assiette est une célébration du goût, de la texture et de la présentation.
+              </p>
+              <div className="grid grid-cols-3 gap-4 pt-4">
+                <div className="text-center">
+                  <div className="text-3xl font-black text-[#FF6B35]">20+</div>
+                  <p className="text-sm text-gray-600">Années d&apos;expérience</p>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-black text-[#FF6B35]">150+</div>
+                  <p className="text-sm text-gray-600">Plats différents</p>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-black text-[#FF6B35]">5★</div>
+                  <p className="text-sm text-gray-600">Clients ravis</p>
+                </div>
+              </div>
+            </div>
+            {/* Image */}
+            <div className="relative h-96 rounded-2xl overflow-hidden shadow-xl">
+              <img
+                src="https://images.unsplash.com/photo-1495521821757-a1efb6729352?w=600&q=95&auto=format&fit=crop"
+                alt="Restaurant ambiance"
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="relative py-28 md:py-36 px-4 sm:px-6 lg:px-8 bg-white border-t border-gray-200">
         <div className="max-w-4xl mx-auto text-center space-y-8">
           <h2 className="text-4xl md:text-5xl font-black text-gray-900 tracking-tight">
-            Ready to Order?
+            Prêt à commander?
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Browse our complete menu and discover a selection of dishes prepared with passion and expertise by our world-class chefs.
+            Parcourez notre menu complet et découvrez une sélection de plats préparés avec passion et expertise par nos chefs de classe mondiale.
           </p>
           <Link
             href="/menu"
             className="inline-flex items-center gap-3 px-12 py-6 bg-[#FF6B35] text-white rounded-2xl font-bold text-lg hover:bg-[#FF6B35]/90 transition-all duration-200 hover:shadow-2xl hover:shadow-[#FF6B35]/30"
           >
-            Start Ordering
+            Commencer une Commande
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.5}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
             </svg>

@@ -29,10 +29,10 @@ export const Header: React.FC = () => {
                   Menu
                 </Link>
                 <Link href="/client/orders" className="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors">
-                  Orders
+                  Commandes
                 </Link>
                 <Link href="/client/profile" className="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors">
-                  Profile
+                  Profil
                 </Link>
                 {user.role === 'admin' && (
                   <Link href="/admin/dashboard" className="text-sm font-medium px-3 py-1 bg-[#FF6B35] text-white rounded-lg hover:bg-[#FF6B35]/90">
@@ -43,7 +43,7 @@ export const Header: React.FC = () => {
             ) : (
               <>
                 <Link href="/" className="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors">
-                  Home
+                  Accueil
                 </Link>
                 <Link href="/menu" className="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors">
                   Menu
@@ -113,10 +113,10 @@ export const Header: React.FC = () => {
             ) : (
               <div className="flex items-center gap-3">
                 <Link href="/login" className="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors px-3 py-2">
-                  Accès Privé
+                  Connexion
                 </Link>
                 <Link href="/register" className="px-4 py-2 bg-[#FF6B35] text-white rounded-lg text-sm font-medium hover:bg-[#FF6B35]/90 transition-all hover:shadow-lg">
-                  Rejoindre Maison Élysia
+                  S&apos;inscrire
                 </Link>
               </div>
             )}
@@ -156,13 +156,13 @@ export const Header: React.FC = () => {
             ) : (
               <>
                 <Link href="/" className="block px-4 py-2 text-sm text-gray-600 hover:text-gray-900">
-                  Home
+                  Accueil
                 </Link>
                 <Link href="/menu" className="block px-4 py-2 text-sm text-gray-600 hover:text-gray-900">
                   Menu
                 </Link>
-                <a href="#featured" className="block px-4 py-2 text-sm text-gray-600 hover:text-gray-900">
-                  About
+                <a href="#about" className="block px-4 py-2 text-sm text-gray-600 hover:text-gray-900">
+                  À propos
                 </a>
               </>
             )}
