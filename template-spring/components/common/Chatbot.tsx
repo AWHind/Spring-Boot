@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useRef, useEffect } from 'react';
+import { chatApi } from '@/lib/api/client';
 
 interface Message {
   id: string;
@@ -137,8 +138,18 @@ export const Chatbot: React.FC = () => {
     setInput('');
     setIsLoading(true);
 
-    // Simulate bot response delay
-    setTimeout(() => {
+    try {
+      const response = await chatApi.sendMessage(input);
+      const botResponse: Message = {
+        id: (Date.now() + 1).toString(),
+        text: response.botResponse || getResponse(input),
+        sender: 'bot',
+        timestamp: new Date(),
+      };
+      setMessages((prev) => [...prev, botResponse]);
+    } catch (error) {
+      console.error('[v0] Chat API error:', error);
+      // Fallback to client-side response if API fails
       const botResponse: Message = {
         id: (Date.now() + 1).toString(),
         text: getResponse(input),
@@ -146,8 +157,9 @@ export const Chatbot: React.FC = () => {
         timestamp: new Date(),
       };
       setMessages((prev) => [...prev, botResponse]);
+    } finally {
       setIsLoading(false);
-    }, 500);
+    }
   };
 
   const handleKeyPress = (e: React.KeyboardEvent) => {

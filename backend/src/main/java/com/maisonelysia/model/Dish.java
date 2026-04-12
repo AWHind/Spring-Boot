@@ -1,0 +1,37 @@
+package com.maisonelysia.model;
+
+import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Entity
+@Table(name = "dishes")
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+public class Dish {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    private String name;
+
+    private String description;
+
+    private Double price;
+
+    private String category;
+
+    private String image;
+
+    private Integer rating;
+
+    private Integer reviews;
+
+    private Boolean vegetarian;
+
+    private Boolean glutenFree;
+
+}
